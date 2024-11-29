@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="Home_styles.css"> <!-- Link to external styles -->
+</head>
+<body>
+
+    <div class="container">
+        <h1>Welcome, <span id="userDisplayName">User</span></h1>
+        
+        <div class="tiles-container">
+            <!-- Request Access Tile (Link to access request page) -->
+            <a href="AccessRequest.html" class="tile">
+                <img src="images/Access.png" alt="Access Request" class="tile-logo">
+                <h3>Start an Access Request</h3>
+                <p>Get access to systems, roles, etc.</p>
+            </a>
+            
+            <!-- My Requests Tile (Link to requests status page) -->
+            <a href="MyRequests.html" class="tile">
+                <img src="images/CurrentAccess.png" alt="My Requests" class="tile-logo">
+                <h3>View my current access</h3>
+                <p>See what you have access to.</p>
+            </a>
+
+            <!-- Account Settings Tile (Link to account settings page) -->
+            <a href="AccountSettings.html" class="tile">
+                <img src="images/Profile_.png" alt="Account Settings" class="tile-logo">
+                <h3>View my Profile</h3>
+                <p>View your current information.</p>
+            </a>
+        </div>
+
+        <!-- Current Access Table -->
+        <div class="table-container">
+            <h2>My Recent Requests</h2>
+            <table class="requests-table">
+                <thead>
+                    <tr>
+                        <th>Type</th>
+                        <th>Access For</th>
+                        <th>Assigned To</th>
+                        <th>Expires</th>
+                        <th>State</th>
+                        <th>Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Example Rows -->
+                    <tr>
+                        <td>Request</td>
+                        <td>System A</td>
+                        <td>John Doe</td>
+                        <td>2024-12-15</td>
+                        <td>Pending</td>
+                        <td><button class="drill-btn">View</button></td>
+                    </tr>
+                    <tr>
+                        <td>Generic Account</td>
+                        <td>System B</td>
+                        <td>Jane Smith</td>
+                        <td>2024-11-30</td>
+                        <td>Approved</td>
+                        <td><button class="drill-btn">View</button></td>
+                    </tr>
+                    <tr>
+                        <td>Request</td>
+                        <td>System C</td>
+                        <td>Emily Davis</td>
+                        <td>2024-12-20</td>
+                        <td>Rejected</td>
+                        <td><button class="drill-btn">View</button></td>
+                    </tr>
+                    <!-- Repeat the rows for your last 10 access requests -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="Home_script.js"></script>
+</body>
+</html>

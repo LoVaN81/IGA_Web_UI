@@ -1,0 +1,175 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Body Styling */
+body {
+    background-color: #f4f7f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Container Styling */
+.container {
+    width: 90%;
+    max-width: 1000px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Heading */
+h1 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Tiles Container */
+.tiles-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 30px;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Tile Styling */
+.tile {
+    background-color: #3498db;  /* Blue Background */
+    padding: 20px;
+    border-radius: 12px;
+    width: 30%;
+    min-width: 200px;  /* Prevent the tile from becoming too small */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: white;  /* White text for visibility */
+    transition: transform 0.3s ease;
+    text-decoration: none;  /* Remove underline for links */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Tile Logo Styling */
+.tile-logo {
+    width: 50px;  /* Limit the width of the logo */
+    height: 50px;  /* Limit the height of the logo */
+    margin-bottom: 15px;
+    object-fit: contain;  /* Ensure the logo keeps its aspect ratio */
+    max-width: 80%;  /* Limit the logo's size relative to the tile */
+    max-height: 80px;  /* Limit the height of the logo */
+    transition: transform 0.3s ease;
+}
+
+.tile:hover .tile-logo {
+    transform: scale(1.1);  /* Slightly enlarge the logo on hover */
+}
+
+.tile h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.tile p {
+    font-size: 16px;
+    margin-bottom: 15px;
+    font-style: italic;  /* This makes the text italic */
+}
+
+.tile:hover {
+    transform: translateY(-5px);
+    background-color: #2980b9;  /* Slightly darker blue on hover */
+}
+
+/* Table Container Styling */
+.table-container {
+    margin-top: 40px;
+    width: 100%;
+}
+
+h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Table Styling */
+.requests-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.requests-table th, .requests-table td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.requests-table th {
+    background-color: #f7f7f7;
+    color: #333;
+    font-size: 16px;
+}
+
+.requests-table td {
+    color: #333;
+    font-size: 14px;
+}
+
+.requests-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.requests-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Drill Button Styling */
+.drill-btn {
+    padding: 8px 16px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.drill-btn:hover {
+    background-color: #2980b9;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .tiles-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tile {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .requests-table th, .requests-table td {
+        font-size: 12px;
+        padding: 10px;
+    }
+}
