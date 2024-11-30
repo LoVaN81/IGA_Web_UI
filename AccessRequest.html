@@ -18,23 +18,22 @@
                 <input type="text" id="user" placeholder="Enter user name" required>
             </div>
 
+            <!-- System Autocomplete -->
+
             <div class="form-group">
                 <label for="system">Access request for:</label>
-                <input type="text" id="system" placeholder="Search for a system..." required>
-            </div>
+                <input type="text" id="system" placeholder="Search for a system..." autocomplete="on">
+                <div id="suggestions-container-system" class="suggestions-container-system"></div> <!-- Suggestions appear here -->
+            </div>            
 
+            <!-- Department Dropdown -->
             <div class="form-group">
                 <label for="department">Department:</label>
-                <select id="department" required>
-                    <option value="" disabled selected>Select a department</option>
-                    <option value="IT">IT</option>
-                    <option value="HR">HR</option>
-                    <option value="Finance">Finance</option>
-                    <option value="Sales">Sales</option>
-                    <option value="Marketing">Marketing</option>
-                </select>
+                <input type="text" id="department" placeholder="Search for a department..." autocomplete="on">
+                <div id="suggestions-container-department" class="suggestions-container-department"></div> <!-- Suggestions appear here -->
             </div>
 
+            <!-- Role Dropdown -->
             <div class="form-group">
                 <label for="role">Role:</label>
                 <select id="role" required>
@@ -45,6 +44,7 @@
                 </select>
             </div>
 
+            <!-- Submit Button -->
             <button type="submit" class="submit-button">Submit Request</button>
         </form>
     </div>
