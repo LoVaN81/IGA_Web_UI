@@ -1,9 +1,14 @@
-/* General Styling for Body */
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f9f9f9;
+/* Global Styles */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Body Styling */
+body {
+    background-color: #f4f7f6;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,8 +16,8 @@ body {
     padding: 20px;
 }
 
-/* Main Container */
-.access-request-container {
+/* Container Styling */
+.container {
     width: 90%;
     max-width: 1000px;
     background-color: white;
@@ -22,7 +27,7 @@ body {
     text-align: center;
     display: flex;
     flex-direction: column;
-    align-items: center;    
+    align-items: center;
 }
 
 /* Heading Styling */
